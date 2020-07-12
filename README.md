@@ -17,3 +17,14 @@
 * I WANT an app where I can log things I want to eat, and then show I've eaten them
 
 * SO I can brag about how many burgers I've consumed while showing off my programming skills
+
+### Important stuff I learned
+
+* Creating package.json
+    * The package.json is used for more than dependencies - like defining project properties, description, author & license information, scripts, etc.
+
+* Creating package-lock.json
+    The package-lock.json is solely used to lock dependencies to a specific version number.
+
+* Node_Modules/
+    * This is how we use Express.
