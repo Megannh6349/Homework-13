@@ -28,3 +28,7 @@
 
 * Node_Modules/
     * This is how we use Express.
+
+* MySQL basics
+    * Had a lot of issues here and learned how to troubleshoot issues I may have
+    
