@@ -1,12 +1,14 @@
 // Import express
 var express = require("express");
 
+var router = express.Router();
+
 // Import burger.js
 var burger = require("../models/burger.js");
 
 // Create routes and set up logic within those routes where required
 router.get("/", function (req, res) {
-    cat.all(function (data) {
+    burger.all(function (data) {
         var hbsObject = {
             burgers: data
         };
@@ -21,12 +23,13 @@ router.post("/", function (req, res) {
     });
 });
 
-router.put("/:id", function (req, res) {
+router.post("/:id", function (req, res) {
     var condition = "id = " + req.params.id;
 
     console.log("condition", condition);
 
-    burger.update({ devoured: req.body.devoured }, condition, function () {
+    burger.update({ devoured: req.body.devoured }, condition, function (burger) {
+        console.log(burger)
         res.redirect("/");
     });
 });
